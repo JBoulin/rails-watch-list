@@ -1,7 +1,15 @@
-<h1>All Lists</h1>
-<ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/app/assets/images/martin');">
+  <div class="container text-center">
+    <h1>Welcome to my ugly movie list HAVE FUN!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+  </div>
+</div>
+
+<div class="container text-center mt-3">
+<%= link_to 'Create a new list', new_list_path %>
+</div>
+<ul class="container mb-3 mt-3 p-3 rounded">
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>
-<%= link_to 'Create a new list', new_list_path %>
